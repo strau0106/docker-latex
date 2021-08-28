@@ -1,3 +1,5 @@
+# LaTeX
+
 ![LaTeX Logo](/latex.png)
 
 A convenient way to run LaTeX on various platform using Docker (latexmk, pdflatex...).
