@@ -15,23 +15,23 @@ A convenient way to run LaTeX on various platform using Docker (latexmk, pdflate
 
 Assuming that you have a file `foo.tex` in your current working directory that you want to convert into a PDF `foo.pdf`:
 
-### Mac/Linux
+**Mac/Linux**
 
-```
+```bash
 docker run --rm -t --user="$(id -u):$(id -g)" --net=none -v "$(pwd):/tmp" thomasleplus/latex latexmk -outdir=/tmp -pdf /tmp/foo.tex
 ```
 
-### Windows
+**Windows**
 
 In `cmd`:
 
-```
+```batch
 docker run --rm -t --net=none -v "%cd%:/tmp" thomasleplus/latex latexmk -outdir=/tmp -pdf /tmp/foo.tex
 ```
 
 In PowerShell:
 
-```
+```pwsh
 docker run --rm -t --net=none -v "${PWD}:/tmp" thomasleplus/latex latexmk -outdir=/tmp -pdf /tmp/foo.tex
 ```
 
@@ -39,7 +39,7 @@ docker run --rm -t --net=none -v "${PWD}:/tmp" thomasleplus/latex latexmk -outdi
 
 To know more command line options of `latexmk`:
 
-```
+```bash
 docker run --rm --net=none thomasleplus/latex latexmk -h
 ```
 

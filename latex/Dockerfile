@@ -22,7 +22,8 @@ ARG PYGMENTS=python3-pygments
 ARG FIG2DEV=fig2dev
 ARG JRE=default-jre-headless
 
-RUN apt-get update && apt-get install -y \
+# hadolint ignore=DL3008
+RUN apt-get update && apt-get install --no-install-recommends -y \
   texlive-full \
   # some auxiliary tools
   "$WGET" \
@@ -42,4 +43,5 @@ RUN apt-get update && apt-get install -y \
   # but it only adds some overhead while building the image.
   apt-get --purge remove -y .\*-doc$ && \
   # Remove more unnecessary stuff
-  apt-get clean -y
+  apt-get clean -y && \
+  rm -rf /var/lib/apt/lists/*
