@@ -37,7 +37,7 @@ docker run --rm -t --net=none -v "${PWD}:/tmp" thomasleplus/latex latexmk -outdi
 
 ## Help
 
-To know more command line options of `latexmk`:
+To know more command-line options of `latexmk`:
 
 ```bash
 docker run --rm --net=none thomasleplus/latex latexmk -h
