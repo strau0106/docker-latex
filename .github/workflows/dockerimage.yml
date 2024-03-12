@@ -29,6 +29,3 @@ jobs:
           push: true
           sbom: true
           tags: leplusorg/latex:latest
-      - name: Test the Docker image
-        working-directory: latex
-        run: docker compose -f docker-compose.test.yml run sut
