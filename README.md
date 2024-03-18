@@ -43,6 +43,23 @@ To know more command-line options of `latexmk`:
 docker run --rm --net=none leplusorg/latex latexmk -h
 ```
 
+## texlive vs texlive-full
+
+Version 1 of this image was using the
+[texlive-full](https://packages.debian.org/search?keywords=texlive-full&searchon=names&exact=1&suite=all&section=all)
+debian package to include as much TeX Live packages pre-installed as
+possible. But the resulting docker image was over 4 GB making it slow
+to download and breaking some CI/CD disk limits (including the free
+tier of GitHub Actions that I use). To keep the image usable by as many
+people as possible, I decided with version 2 and above to switch
+to the default
+[texlive](https://packages.debian.org/search?keywords=texlive&searchon=names&exact=1&suite=all&section=all)
+package.
+
+If you need more TeX Live packages, you have the following options:
+- use version 1 of this docker image (i.e. leplusorg/latex:1).
+- use the image this fork is based on (i.e. aergus/latex).
+
 ## Request new tool
 
 Please use [this link](https://github.com/leplusorg/docker-latex/issues/new?assignees=thomasleplus&labels=enhancement&template=feature_request.md&title=%5BFEAT%5D) (GitHub account required) to request that a new tool be added to the image. I am always interested in adding new capabilities to these images.
