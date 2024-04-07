@@ -7,8 +7,6 @@ A convenient way to run LaTeX on various platform using Docker (latexmk, pdflate
 [![Docker Build](https://github.com/leplusorg/docker-latex/workflows/Docker/badge.svg)](https://github.com/leplusorg/docker-latex/actions?query=workflow:"Docker")
 [![Docker Stars](https://img.shields.io/docker/stars/leplusorg/latex)](https://hub.docker.com/r/leplusorg/latex)
 [![Docker Pulls](https://img.shields.io/docker/pulls/leplusorg/latex)](https://hub.docker.com/r/leplusorg/latex)
-[![Docker Automated](https://img.shields.io/docker/cloud/automated/leplusorg/latex)](https://hub.docker.com/r/leplusorg/latex)
-[![Docker Build](https://img.shields.io/docker/cloud/build/leplusorg/latex)](https://hub.docker.com/r/leplusorg/latex)
 [![Docker Version](https://img.shields.io/docker/v/leplusorg/latex?sort=semver)](https://hub.docker.com/r/leplusorg/latex)
 
 ## Example
