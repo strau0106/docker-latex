@@ -1,5 +1,9 @@
 FROM debian:stable-slim
 
+HEALTHCHECK NONE
+
+ENTRYPOINT []
+
 ARG USER_NAME=latex
 ARG USER_HOME=/home/latex
 ARG USER_ID=1000
@@ -21,3 +25,9 @@ RUN adduser \
   --gecos "${USER_GECOS}" \
   --disabled-password \
   "${USER_NAME}"
+
+ENV HOME "${USER_HOME}"
+
+USER "${USER_NAME}"
+
+WORKDIR "${HOME}"
