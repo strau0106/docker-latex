@@ -1,4 +1,4 @@
-FROM debian:stable-slim
+FROM debian:12.5-slim@sha256:346dd1cba3caf44de9467ae428a9d38573f14665408acb80a615e2a7c3f9a2a4
 
 HEALTHCHECK NONE
 
