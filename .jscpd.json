@@ -1,5 +1,7 @@
 {
   "ignore": [
-        "LICENSE.txt"
+        "LICENSE.txt",
+        ".github/workflows/dockerimage.yml",
+        ".github/workflows/dockerrelease.yml"
   ]
 }
